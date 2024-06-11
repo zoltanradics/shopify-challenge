@@ -80,7 +80,6 @@
           data-section="{{ section.id }}"
           data-url="{{ product.url }}"
         >
-        {{ product | json }}
           {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
           {%- for block in section.blocks -%}
