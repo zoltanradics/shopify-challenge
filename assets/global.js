@@ -960,6 +960,7 @@ customElements.define('slideshow-component', SlideshowComponent);
 class VariantSelects extends HTMLElement {
   constructor() {
     super();
+    // onVariantChange event is fired when variant is selected
     this.addEventListener('change', this.onVariantChange);
   }
 
@@ -978,6 +979,8 @@ class VariantSelects extends HTMLElement {
     } else {
       this.updateURL();
       this.updateVariantInput();
+      
+      // This method re-renders the product information
       this.renderProductInfo();
       this.updateShareUrl();
     }
